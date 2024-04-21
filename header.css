@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.login-text {
+    color: white;
+    text-decoration: none;
+}
+
+.filter-button {
+    background-color: #0069d9;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: #007bff;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifly</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Company Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="window.location.href='customer_support.html'">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="login.png" alt="Profile Image" class="profile-img" id="loginButton">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Book your next Flight</h1>
+        <form action="#" method="get" class="search-form">
+            <input type="text" name="from" placeholder="From (Departure)">
+            <button type="button" id="reverseButton">
+                <img src="reverse.png" alt="Reverse">
+            </button>
+
+            <input type="text" name="to" placeholder="To (Destination)">
+
+            <input type="date" name="departure_date" placeholder="Departure Date">
+            <input type="date" name="return_date" placeholder="Return Date" class="return-date" style="display: none;">
+            <input type="submit" value="Search">
+        </form>
+        
+        <!-- Round Trip Checkbox Moved Below -->
+        <div class="round-trip-check">
+            <input class="form-check-input" type="checkbox" id="roundTripCheck">
+            <label class="form-check-label" for="roundTripCheck">Round Trip</label>
+        </div>
+
+        <button onclick="window.location.href='#'" class="btn btn-secondary my-3">Filter by</button>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+                <h5 class="mb-1">Aegean Airlines | Athens to London</h5>
+                <p class="mb-1">Date: 5/4/2024 | 12:00 GMT+2  |   Price: $120</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <h5 class="mb-1">British Airlines | London to New York</h5>
+                <p class="mb-1">Date: 6/4/2024  | 23:00 GMT | Price: $1000</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <h5 class="mb-1">Ryanair | Berlin to London</h5>
+                <p class="mb-1">Date: 8/4/2024 | 13:00 GMT | Price: $30</p>
+            </a>
+            <a href="#a" class="list-group-item list-group-item-action">
+                <h5 class="mb-1">EasyJet | London to Paris</h5> 
+                <p class="mb-1">Date 10/4/2024 | 15:00 GMT | Price: $50</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login or Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Choose an option:</p>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='login.html'">Login</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='signup.html'">Sign Up</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='admin.html'">Sign In as adminstrator</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Show login modal on login button click
+            $('#loginButton').click(function() {
+                $('#loginModal').modal('show');
+            });
+
+            // Reverse Button functionality
+            $('#reverseButton').click(function() {
+                var fromValue = $('input[name="from"]').val();
+                var toValue = $('input[name="to"]').val();
+                $('input[name="from"]').val(toValue);
+                $('input[name="to"]').val(fromValue);
+            });
+
+            // Checkbox functionality
+            $('#roundTripCheck').change(function() {
+                if ($(this).is(':checked')) {
+                    $('.return-date').show();
+                } else {
+                    $('.return-date').hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

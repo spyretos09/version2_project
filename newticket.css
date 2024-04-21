@@ -1,0 +1,18 @@
+.container {
+    max-width: 500px; /* Makes the form container narrower for better aesthetics */
+    margin: auto; /* Centers the container */
+    background: #f8f9fa; /* A light background color from Bootstrap's palette */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Adds a subtle shadow for depth */
+}
+
+h2 {
+    color: #007bff; /* Uses Bootstrap's primary color for the heading */
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    width: 100%; /* Makes the submit button span the full width of the form */
+    padding: 10px; /* Adds more padding for a larger, more clickable area */
+}

@@ -1,0 +1,38 @@
+/* Dropdown button */
+.dropdown-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1;
+}
+
+.dropdown-content p {
+    margin: 10px 0;
+}
+
+/* Show dropdown content */
+.show {
+    display: block;
+}
+
+.container {
+    max-width: 500px; /* Makes the form container narrower for better aesthetics */
+    margin: auto; /* Centers the container */
+    background: #f8f9fa; /* A light background color from Bootstrap's palette */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Adds a subtle shadow for depth */
+  }

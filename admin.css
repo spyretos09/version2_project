@@ -1,0 +1,57 @@
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+form {
+    margin-top: 40px;
+}
+input[type="text"], input[type="date"] {
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    border-radius: 8px;
+}
+input[type="submit"] {
+    padding: 15px 22px;
+    background-color: #007bff;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-group .btn {
+    margin: 0 10px; 
+}
+
+.list-group-item h5 {
+    color: #007bff; 
+}
+
+.list-group-item p {
+    color: #356894; 
+}
+
+.list-group-item {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); 
+}
